@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progreso del Proyecto</title>
+    <style>
+        .progress-container {
+            width: 100%;
+            background-color: #f3f3f3;
+        }
+        .progress-bar {
+            width: 0;
+            height: 30px;
+            background-color: #4caf50;
+            text-align: center;
+            line-height: 30px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Progreso del Proyecto</h1>
+    <div>
+        <label for="startDate1">Fecha de inicio 1:</label>
+        <input type="date" id="startDate1">
+    </div>
+    <div>
+        <label for="endDate1">Fecha de término 1:</label>
+        <input type="date" id="endDate1">
+    </div>
+    <div class="progress-container">
+        <div id="progressBar1" class="progress-bar">0%</div>
+    </div>
+    <br>
+    <div>
+        <label for="startDate2">Fecha de inicio 2:</label>
+        <input type="date" id="startDate2">
+    </div>
+    <div>
+        <label for="endDate2">Fecha de término 2:</label>
+        <input type="date" id="endDate2">
+    </div>
+    <div class="progress-container">
+        <div id="progressBar2" class="progress-bar">0%</div>
+    </div>
+    <br>
+    <div>
+        <label for="startDate3">Fecha de inicio 3:</label>
+        <input type="date" id="startDate3">
+    </div>
+    <div>
+        <label for="endDate3">Fecha de término 3:</label>
+        <input type="date" id="endDate3">
+    </div>
+    <div class="progress-container">
+        <div id="progressBar3" class="progress-bar">0%</div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
