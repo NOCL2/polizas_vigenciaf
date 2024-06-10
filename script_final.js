@@ -1,35 +1,26 @@
-function actualizarProgreso() {
-    const now = new Date();
+function updateProgressBar(progressBar, currentTime) {
+    const totalDuration = progressBar.endDate - progressBar.startDate;
+    const elapsedDuration = currentTime - progressBar.startDate;
+    const progressPercentage = Math.min((elapsedDuration / totalDuration) * 100, 100);
 
+    const progressBarElement = document.getElementById(progressBar.progressBarId);
+    if (progressBarElement) {
+        progressBarElement.style.width = progressPercentage + '%';
+        progressBarElement.innerText = Math.round(progressPercentage) + '%';
+    }
 
-
-    // Obtener el elemento HTML donde se mostrará la fecha y hora actual
-var dateTimeElement = document.getElementById("currentDateTime");
-
-// Función para obtener la fecha y hora actual en un formato específico
-function getCurrentDateTime() {
-    var now = new Date();
-    var dateTimeString = now.toLocaleString(); // Puedes personalizar el formato según tus preferencias
-    return dateTimeString;
+    const startDateElement = document.getElementById(progressBar.startDateElementId);
+    const endDateElement = document.getElementById(progressBar.endDateElementId);
+    if (startDateElement && endDateElement) {
+        startDateElement.innerText = progressBar.startDate.toLocaleDateString();
+        endDateElement.innerText = progressBar.endDate.toLocaleDateString();
+    }
 }
 
-// Función para actualizar la fecha y hora actual cada segundo
-function updateDateTime() {
-    var currentDateTime = getCurrentDateTime();
-    dateTimeElement.textContent = currentDateTime;
-}
-
-// Llamar a la función inicialmente para mostrar la fecha y hora actual
-updateDateTime();
-
-// Actualizar la fecha y hora actual cada segundo
-setInterval(updateDateTime, 1000);
-
-
-   const progressBars = [
+const progressBars = [
     {
-        startDate: new Date('2020-07-17'), // Establece la fecha de inicio aquí
-        endDate: new Date('2024-07-17'),   // Establece la fecha de término aquí
+        startDate: new Date('2020-07-17'),
+        endDate: new Date('2024-07-17'),
         progressBarId: 'progressBar1',
         startDateElementId: 'startDate1',
         endDateElementId: 'endDate1'
@@ -98,36 +89,36 @@ setInterval(updateDateTime, 1000);
         endDateElementId: 'endDate10'
     },
     {
-        startDate: new Date('2023-03-01'),
-        endDate: new Date('2024-02-28'),
+        startDate: new Date('2021-07-05'),
+        endDate: new Date('2024-08-01'),
         progressBarId: 'progressBar11',
         startDateElementId: 'startDate11',
         endDateElementId: 'endDate11'
     },
     {
-        startDate: new Date('2023-08-02'),
-        endDate: new Date('2026-08-01'),
+        startDate: new Date('2021-01-26'),
+        endDate: new Date('2024-07-30'),
         progressBarId: 'progressBar12',
         startDateElementId: 'startDate12',
         endDateElementId: 'endDate12'
     },
     {
-        startDate: new Date('2023-07-19'),
-        endDate: new Date('2024-11-18'),
+        startDate: new Date('2020-07-17'),
+        endDate: new Date('2024-07-17'),
         progressBarId: 'progressBar13',
         startDateElementId: 'startDate13',
         endDateElementId: 'endDate13'
     },
     {
-        startDate: new Date('2024-01-22'),
-        endDate: new Date('2025-01-21'),
+        startDate: new Date('2021-06-11'),
+        endDate: new Date('2024-06-11'),
         progressBarId: 'progressBar14',
         startDateElementId: 'startDate14',
         endDateElementId: 'endDate14'
     },
     {
-        startDate: new Date('2022-06-10'),
-        endDate: new Date('2025-06-08'),
+        startDate: new Date('2023-03-01'),
+        endDate: new Date('2024-02-28'),
         progressBarId: 'progressBar15',
         startDateElementId: 'startDate15',
         endDateElementId: 'endDate15'
@@ -141,25 +132,9 @@ setInterval(updateDateTime, 1000);
     }
 ];
 
-function actualizarProgreso() {
-    progressBars.forEach((poliza, index) => {
-        const startDate = poliza.startDate;
-        const endDate = poliza.endDate;
-        const now = new Date();
-        const elapsed = now - startDate;
-        const total = endDate - startDate;
-        const progress = Math.min(100, Math.floor((elapsed / total) * 100));
+const currentTime = new Date();
 
-        // Actualizar el texto de las fechas y el ancho de la barra de progreso
-        document.getElementById(poliza.startDateElementId).textContent = startDate.toLocaleDateString();
-        document.getElementById(poliza.endDateElementId).textContent = endDate.toLocaleDateString();
-        document.getElementById(poliza.progressBarId).style.width = `${progress}%`;
-        document.getElementById(poliza.progressBarId).textContent = `${progress}%`;
-    });
-}
-
-// Llamar a la función inicialmente para actualizar el progreso
-actualizarProgreso();
-
-// Actualizar el progreso cada segundo
-setInterval(actualizarProgreso, 1000);
+progressBars.forEach(progressBar => {
+    console.log(`Updating progress bar: ${progressBar.progressBarId}`);
+    updateProgressBar(progressBar, currentTime);
+});
