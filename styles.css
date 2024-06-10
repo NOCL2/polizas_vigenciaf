@@ -1,0 +1,41 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+#chart {
+    margin: 20px auto;
+    width: 100%; /* Ampliar el ancho del gráfico */
+    height: 600px; /* Ajustar la altura según sea necesario */
+    border: 1px solid #ccc;
+    overflow: hidden; /* Evita que las barras se salgan del contenedor */
+}
+
+h1 {
+    margin-top: 20px;
+}
+
+.bar {
+    fill: #36b68f; /* Color de las barras */
+}
+
+.bar:hover {
+    fill: #6c7d2e; /* Cambio de color al pasar el mouse */
+}
+
+.progress-text {
+    font-size: 10px;
+    fill: #fff; /* Color del texto */
+    pointer-events: none; /* Evita que el texto interfiera con eventos del mouse */
+    
+}
+
+.tooltip {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+}
