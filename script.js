@@ -26,8 +26,8 @@ setInterval(updateDateTime, 1000);
 
     const progressBars = [
         {
-            startDate: new Date('2024-04-01'), // Establece la fecha de inicio aquí
-            endDate: new Date('2025-03-31'),   // Establece la fecha de término aquí
+            startDate: new Date('2020-07-17'), // Establece la fecha de inicio aquí
+            endDate: new Date('2024-07-17'),   // Establece la fecha de término aquí
             progressBarId: 'progressBar1',
             startDateElementId: 'startDate1',
             endDateElementId: 'endDate1'
