@@ -1,4 +1,4 @@
-function updateProgress() {
+function actualizarProgreso() {
     const now = new Date();
 
     // Obtener el elemento HTML donde se mostrará la fecha y hora actual
