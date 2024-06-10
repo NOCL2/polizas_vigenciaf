@@ -27,7 +27,7 @@ setInterval(updateDateTime, 1000);
     const progressBars = [
         {
             startDate: new Date('2020-07-18'), // Soporte Typhoon
-            endDate: new Date('17/07/2024'),    
+            endDate: new Date('2024-07-20'),    
             progressBarId: 'progressBar1',
             startDateElementId: 'startDate1',
             endDateElementId: 'endDate1'
