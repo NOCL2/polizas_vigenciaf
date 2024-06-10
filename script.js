@@ -1,5 +1,7 @@
-function actualizarProgreso() {
+function updateProgress() {
     const now = new Date();
+
+
 
     // Obtener el elemento HTML donde se mostrará la fecha y hora actual
 var dateTimeElement = document.getElementById("currentDateTime");
@@ -24,43 +26,143 @@ updateDateTime();
 setInterval(updateDateTime, 1000);
 
 
-    const polizas = [
-    { start: new Date('2020-07-17'), end: new Date('2024-07-17') },
-    { start: new Date('2021-01-26'), end: new Date('2024-07-30') },
-    { start: new Date('2021-06-11'), end: new Date('2024-06-11') },
-    { start: new Date('2022-01-08'), end: new Date('2024-12-31') },
-    { start: new Date('2021-07-05'), end: new Date('2024-08-01') },
-    { start: new Date('2022-08-12'), end: new Date('2025-08-12') },
-    { start: new Date('2023-01-01'), end: new Date('2025-12-31') },
-    { start: new Date('2023-03-21'), end: new Date('2026-03-20') },
-    { start: new Date('2023-01-04'), end: new Date('2028-01-04') },
-    { start: new Date('2023-04-10'), end: new Date('2024-09-08') },
-    { start: new Date('2023-03-01'), end: new Date('2024-02-28') },
-    { start: new Date('2023-08-02'), end: new Date('2026-08-01') },
-    { start: new Date('2023-07-19'), end: new Date('2024-11-18') },
-    { start: new Date('2024-01-22'), end: new Date('2025-01-21') },
-    { start: new Date('2022-06-10'), end: new Date('2025-06-08') },
-    { start: new Date('2024-04-01'), end: new Date('2025-03-31') },
-];
+    const progressBars = [
+        {
+            startDate: new Date('2024-04-01'), // Establece la fecha de inicio aquí
+            endDate: new Date('2025-03-31'),   // Establece la fecha de término aquí
+            progressBarId: 'progressBar1',
+            startDateElementId: 'startDate1',
+            endDateElementId: 'endDate1'
+        },
+        {
+            startDate: new Date('2023-08-02'),
+            endDate: new Date('2026-08-01'),
+            progressBarId: 'progressBar2',
+            startDateElementId: 'startDate2',
+            endDateElementId: 'endDate2'
+        },
+        {
+            startDate: new Date('2023-01-04'),
+            endDate: new Date('2028-01-04'),
+            progressBarId: 'progressBar3',
+            startDateElementId: 'startDate3',
+            endDateElementId: 'endDate3'
+        },
+        {
+            startDate: new Date('2024-01-22'),
+            endDate: new Date('2025-01-21'),
+            progressBarId: 'progressBar4',
+            startDateElementId: 'startDate4',
+            endDateElementId: 'endDate4'
+        },
+        {
+            startDate: new Date('2023-03-21'),
+            endDate: new Date('2026-03-20'),
+            progressBarId: 'progressBar5',
+            startDateElementId: 'startDate5',
+            endDateElementId: 'endDate5'
+        },
+        {
+            startDate: new Date('2023-01-01'),
+            endDate: new Date('2025-12-31'),
+            progressBarId: 'progressBar6',
+            startDateElementId: 'startDate6',
+            endDateElementId: 'endDate6'
+        },
+        {
+            startDate: new Date('2022-08-12'),
+            endDate: new Date('2025-08-12'),
+            progressBarId: 'progressBar7',
+            startDateElementId: 'startDate7',
+            endDateElementId: 'endDate7'
+        },
+        {
+            startDate: new Date('2023-07-19'),
+            endDate: new Date('2024-11-18'),
+            progressBarId: 'progressBar8',
+            startDateElementId: 'startDate8',
+            endDateElementId: 'endDate8'
+        },
+        {
+            startDate: new Date('2022-06-10'),
+            endDate: new Date('2025-06-08'),
+            progressBarId: 'progressBar9',
+            startDateElementId: 'startDate9',
+            endDateElementId: 'endDate9'
+        },
+        {
+            startDate: new Date('2022-01-08'),
+            endDate: new Date('2024-12-31'),
+            progressBarId: 'progressBar10',
+            startDateElementId: 'startDate10',
+            endDateElementId: 'endDate10'
+        },
+        {
+            startDate: new Date('2023-04-10'),
+            endDate: new Date('2024-09-08'),
+            progressBarId: 'progressBar11',
+            startDateElementId: 'startDate11',
+            endDateElementId: 'endDate11'
+        },
+        {
+            startDate: new Date('2021-07-05'),
+            endDate: new Date('2024-08-01'),
+            progressBarId: 'progressBar12',
+            startDateElementId: 'startDate12',
+            endDateElementId: 'endDate12'
+        },
+        {
+            startDate: new Date('2021-01-26'),
+            endDate: new Date('2024-07-30'),
+            progressBarId: 'progressBar13',
+            startDateElementId: 'startDate13',
+            endDateElementId: 'endDate13'
+        },
+        {
+            startDate: new Date('2020-07-17'),
+            endDate: new Date('2024-07-17'),
+            progressBarId: 'progressBar14',
+            startDateElementId: 'startDate14',
+            endDateElementId: 'endDate14'
+        },
+        {
+            startDate: new Date('2021-06-11'),
+            endDate: new Date('2024-06-11'),
+            progressBarId: 'progressBar15',
+            startDateElementId: 'startDate15',
+            endDateElementId: 'endDate15'
+        },
+        {
+            startDate: new Date('2023-03-01'),
+            endDate: new Date('2024-02-28'),
+            progressBarId: 'progressBar16',
+            startDateElementId: 'startDate16',
+            endDateElementId: 'endDate16'
+        }
+    ];
 
-    // Función para calcular el progreso de cada póliza y actualizar las barras de progreso
-function actualizarProgreso() {
-    polizas.forEach((poliza, index) => {
-        const startDate = poliza.start;
-        const endDate = poliza.end;
-        const now = new Date();
-        const elapsed = now - startDate;
-        const total = endDate - startDate;
-        const progress = Math.min(100, Math.floor((elapsed / total) * 100));
+    progressBars.forEach(bar => {
+        const progressBar = document.getElementById(bar.progressBarId);
+        document.getElementById(bar.startDateElementId).textContent = bar.startDate.toDateString();
+        document.getElementById(bar.endDateElementId).textContent = bar.endDate.toDateString();
 
-        // Actualizar el texto de las fechas y el ancho de la barra de progreso
-        document.getElementById(`startDate${index + 1}`).textContent = startDate.toLocaleDateString();
-        document.getElementById(`endDate${index + 1}`).textContent = endDate.toLocaleDateString();
-        document.getElementById(`progressBar${index + 1}`).style.width = `${progress}%`;
-        document.getElementById(`progressBar${index + 1}`).textContent = `${progress}%`;
+        const startDate = bar.startDate;
+        const endDate = bar.endDate;
+
+        if (startDate >= endDate) {
+            progressBar.style.width = '0%';
+            progressBar.textContent = '0%';
+            return;
+        }
+
+        const totalTime = endDate - startDate;
+        const elapsedTime = now - startDate;
+        let progress = Math.min(100, (elapsedTime / totalTime) * 100).toFixed(2);
+
+        progressBar.style.width = progress + '%';
+        progressBar.textContent = progress + '%';
     });
 }
 
-
 setInterval(updateProgress, 1000); // Actualiza cada minuto
-actualizarProgreso(); // Llama a la función inmediatamente para mostrar el progreso inicial
+updateProgress(); // Llama a la función inmediatamente para mostrar el progreso inicial
