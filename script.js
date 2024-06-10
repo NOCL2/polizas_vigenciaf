@@ -43,28 +43,24 @@ setInterval(updateDateTime, 1000);
     { start: new Date('2024-04-01'), end: new Date('2025-03-31') },
 ];
 
-    progressBars.forEach(bar => {
-        const progressBar = document.getElementById(bar.progressBarId);
-        document.getElementById(bar.startDateElementId).textContent = bar.startDate.toDateString();
-        document.getElementById(bar.endDateElementId).textContent = bar.endDate.toDateString();
+    // Función para calcular el progreso de cada póliza y actualizar las barras de progreso
+function actualizarProgreso() {
+    polizas.forEach((poliza, index) => {
+        const startDate = poliza.start;
+        const endDate = poliza.end;
+        const now = new Date();
+        const elapsed = now - startDate;
+        const total = endDate - startDate;
+        const progress = Math.min(100, Math.floor((elapsed / total) * 100));
 
-        const startDate = bar.startDate;
-        const endDate = bar.endDate;
-
-        if (startDate >= endDate) {
-            progressBar.style.width = '0%';
-            progressBar.textContent = '0%';
-            return;
-        }
-
-        const totalTime = endDate - startDate;
-        const elapsedTime = now - startDate;
-        let progress = Math.min(100, (elapsedTime / totalTime) * 100).toFixed(2);
-
-        progressBar.style.width = progress + '%';
-        progressBar.textContent = progress + '%';
+        // Actualizar el texto de las fechas y el ancho de la barra de progreso
+        document.getElementById(`startDate${index + 1}`).textContent = startDate.toLocaleDateString();
+        document.getElementById(`endDate${index + 1}`).textContent = endDate.toLocaleDateString();
+        document.getElementById(`progressBar${index + 1}`).style.width = `${progress}%`;
+        document.getElementById(`progressBar${index + 1}`).textContent = `${progress}%`;
     });
 }
+
 
 setInterval(updateProgress, 1000); // Actualiza cada minuto
 updateProgress(); // Llama a la función inmediatamente para mostrar el progreso inicial
