@@ -18,6 +18,8 @@ const policies = [
     { id: 16, name: "Kenworth Fase 1 - Señalización Digital", start: '2024-04-01', end: '2025-03-31' }
 ];
 
+
+
 // Configuración del gráfico
 const margin = { top: 20, right: 20, bottom: 100, left: 200 }; // Aumentamos el margen izquierdo
 const width = 1200 - margin.left - margin.right; // Aumentamos el ancho del gráfico
@@ -61,11 +63,29 @@ svg.append("g")
         .enter()
         .append("th")
         .text(column => column);
+// Verificar si el texto ya existe
+let currentDateText = svg.select(".current-date");
 
+// Si no existe, lo creamos
+if (currentDateText.empty()) {
+    currentDateText = svg.append("text")
+        .attr("class", "current-date")
+        .attr("text-anchor", "end")
+        .attr("alignment-baseline", "hanging")
+        .attr("x", width - 10) // Ajusta la posición en x para que esté a 10 píxeles del borde derecho
+        .attr("y", 10) // Ajusta la posición en y para que esté a 10 píxeles del borde superior
+        .attr("dx", -10) // Desplaza el texto 10 píxeles hacia la izquierda para mejorar el aspecto visual
+        .attr("dy", 10);
+}
 // Función para actualizar el gráfico
 function updateChart() {
+    
     const now = new Date();
+   // Formatear la fecha y hora actual
+   const formattedDateTime = d3.timeFormat("%Y-%m-%d %H:%M:%S")(now);
 
+   // Actualizar texto con la fecha y hora actual
+   currentDateText.text(formattedDateTime);
 
     // Parsear las fechas y calcular el progreso
     policies.forEach(d => {
