@@ -33,106 +33,106 @@ setInterval(updateDateTime, 1000);
             endDateElementId: 'endDate1'
         },
         {
-            startDate: new Date('2021-01-27'), //Ciudad Digital
-            endDate: new Date('2024-07-31'),
+            startDate: new Date('27-01-2021'), //Ciudad Digital
+            endDate: new Date('31-07-2024'),
             progressBarId: 'progressBar2',
             startDateElementId: 'startDate2',
             endDateElementId: 'endDate2'
         },
         {
-            startDate: new Date('2021-06-12'), //Bestel CMP WLAN
-            endDate: new Date('2024-06-12'),
+            startDate: new Date('12-06-2021'), //Bestel CMP WLAN
+            endDate: new Date('12-06-2024'),
             progressBarId: 'progressBar3',
             startDateElementId: 'startDate3',
             endDateElementId: 'endDate3'
         },
         {
-            startDate: new Date('2022-01-09'), //Licitación IFT
-            endDate: new Date('2025-01-01'),
+            startDate: new Date('09-01-2022'), //Licitación IFT
+            endDate: new Date('0|-01-2025'),
             progressBarId: 'progressBar4',
             startDateElementId: 'startDate4',
             endDateElementId: 'endDate4'
         },
         {
-            startDate: new Date('2021-07-05'), //Bolsa Mexicana de valores
-            endDate: new Date('2024-08-01'),
+            startDate: new Date('06-07-2021'), //Bolsa Mexicana de valores
+            endDate: new Date('02-08-2024'),
             progressBarId: 'progressBar5',
             startDateElementId: 'startDate5',
             endDateElementId: 'endDate5'
         },
         {
-            startDate: new Date('2022-08-12'), //Secretaria de la Función Pública
-            endDate: new Date('2025-08-12'),
+            startDate: new Date('13-08-2022'), //Secretaria de la Función Pública
+            endDate: new Date('13-08-2025'),
             progressBarId: 'progressBar6',
             startDateElementId: 'startDate6',
             endDateElementId: 'endDate6'
         },
         {
-            startDate: new Date('2023-01-01'), //Renovación de las pólizas de soporte y servicio de mtto al DC del IFT
-            endDate: new Date('2025-12-31'),
+            startDate: new Date('02-01-2023'), //Renovación de las pólizas de soporte y servicio de mtto al DC del IFT
+            endDate: new Date('01-01-2026'),
             progressBarId: 'progressBar7',
             startDateElementId: 'startDate7',
             endDateElementId: 'endDate7'
         },
         {
-            startDate: new Date('2023-03-21'), //CHEVY SAN CARLOS
-            endDate: new Date('2026-03-20'),
+            startDate: new Date('22-03-2023'), //CHEVY SAN CARLOS
+            endDate: new Date('21-03-2026'),
             progressBarId: 'progressBar8',
             startDateElementId: 'startDate8',
             endDateElementId: 'endDate8'
         },
         {
-            startDate: new Date('2023-01-04'), //Solución Netbotz SKY
-            endDate: new Date('2028-01-04'),
+            startDate: new Date('05-01-2023'), //Solución Netbotz SKY
+            endDate: new Date('05-01-2028'),
             progressBarId: 'progressBar9',
             startDateElementId: 'startDate9',
             endDateElementId: 'endDate9'
         },
         {
-            startDate: new Date('2023-04-10'), //ATALAIT Póliza de Soporte
-            endDate: new Date('2024-09-08'),
+            startDate: new Date('11-04-2023'), //ATALAIT Póliza de Soporte
+            endDate: new Date('09-09-2024'),
             progressBarId: 'progressBar10',
             startDateElementId: 'startDate10',
             endDateElementId: 'endDate10'
         },
         {
-            startDate: new Date('2023-03-01'), //Implementación con Póliza Sabadell
-            endDate: new Date('2024-02-28'),
+            startDate: new Date('02-03-2023'), //Implementación con Póliza Sabadell
+            endDate: new Date('01-03-2024'),
             progressBarId: 'progressBar11',
             startDateElementId: 'startDate11',
             endDateElementId: 'endDate11'
         },
         {
-            startDate: new Date('2023-08-02'), //Implementación y póliza de servicio Break&Fix para equipos TOR
-            endDate: new Date('2026-08-01'),
+            startDate: new Date('03-08-2023'), //Implementación y póliza de servicio Break&Fix para equipos TOR
+            endDate: new Date('02-08-2026'),
             progressBarId: 'progressBar12',
             startDateElementId: 'startDate12',
             endDateElementId: 'endDate12'
         },
         {
-            startDate: new Date('2023-07-19'), //Servicios de implementación MPO MTY
-            endDate: new Date('2024-11-18'),
+            startDate: new Date('20-07-2023'), //Servicios de implementación MPO MTY
+            endDate: new Date('19-11-2024'),
             progressBarId: 'progressBar13',
             startDateElementId: 'startDate13',
             endDateElementId: 'endDate13'
         },
         {
-            startDate: new Date('2024-01-22'), //Servicio de Suministro, logística y montaje para 26 Huawei IdeaHub
-            endDate: new Date('2025-01-21'),
+            startDate: new Date('23-01-2024'), //Servicio de Suministro, logística y montaje para 26 Huawei IdeaHub
+            endDate: new Date('22-01-2025'),
             progressBarId: 'progressBar14',
             startDateElementId: 'startDate14',
             endDateElementId: 'endDate14'
         },
         {
-            startDate: new Date('2022-06-10'), //Hotel las Quintas
-            endDate: new Date('2025-06-08'),
+            startDate: new Date('11-06-2022'), //Hotel las Quintas
+            endDate: new Date('09-06-2025'),
             progressBarId: 'progressBar15',
             startDateElementId: 'startDate15',
             endDateElementId: 'endDate15'
         },
         {
-            startDate: new Date('2024-04-01'), //Kenworth Fase 1 - Señalización Digital
-            endDate: new Date('2025-03-31'),
+            startDate: new Date('02-04-2024'), //Kenworth Fase 1 - Señalización Digital
+            endDate: new Date('01-04-2025'),
             progressBarId: 'progressBar16',
             startDateElementId: 'startDate16',
             endDateElementId: 'endDate16'
