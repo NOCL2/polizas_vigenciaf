@@ -27,28 +27,28 @@ setInterval(updateDateTime, 1000);
     const progressBars = [
         {
             startDate: new Date('18-07-2020'), // Soporte Typhoon
-            endDate: new Date('2024-07-20'),    
+            endDate: new Date('18-07-2024'),    
             progressBarId: 'progressBar1',
             startDateElementId: 'startDate1',
             endDateElementId: 'endDate1'
         },
         {
-            startDate: new Date('2021-01-26'), //Ciudad Digital
-            endDate: new Date('2024-07-30'),
+            startDate: new Date('2021-01-27'), //Ciudad Digital
+            endDate: new Date('2024-07-31'),
             progressBarId: 'progressBar2',
             startDateElementId: 'startDate2',
             endDateElementId: 'endDate2'
         },
         {
-            startDate: new Date('2021-06-11'), //Bestel CMP WLAN
-            endDate: new Date('2024-06-11'),
+            startDate: new Date('2021-06-12'), //Bestel CMP WLAN
+            endDate: new Date('2024-06-12'),
             progressBarId: 'progressBar3',
             startDateElementId: 'startDate3',
             endDateElementId: 'endDate3'
         },
         {
-            startDate: new Date('2022-01-08'), //Licitación IFT
-            endDate: new Date('2024-12-31'),
+            startDate: new Date('2022-01-09'), //Licitación IFT
+            endDate: new Date('2025-01-01'),
             progressBarId: 'progressBar4',
             startDateElementId: 'startDate4',
             endDateElementId: 'endDate4'
