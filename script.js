@@ -63,4 +63,4 @@ function actualizarProgreso() {
 
 
 setInterval(updateProgress, 1000); // Actualiza cada minuto
-updateProgress(); // Llama a la función inmediatamente para mostrar el progreso inicial
+actualizarProgreso(); // Llama a la función inmediatamente para mostrar el progreso inicial
