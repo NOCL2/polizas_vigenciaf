@@ -21,7 +21,7 @@ const policies = [
 
 
 // Configuración del gráfico
-const margin = { top: 20, right: 20, bottom: 50, left: 80 }; // Disminuye el margen izquierdo para mover la gráfica más a la izquierda
+const margin = { top: 20, right: 20, bottom: 100, left: 200 }; // Aumentamos el margen izquierdo
 const width = 1200 - margin.left - margin.right; // Aumentamos el ancho del gráfico
 const height = 600 - margin.top - margin.bottom;
 const svg = d3.select("#chart").append("svg")
