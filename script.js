@@ -1,22 +1,28 @@
 // Datos de las pólizas
 const policies = [
-    { id: 1, name: "SOPORTE TYPHOON", start: '2020-07-17', end: '2024-07-17' },
-    { id: 2, name: "Ciudad Digital CDMX", start: '2021-01-26', end: '2024-07-30' },
-    { id: 3, name: "Bestel CMP WLAN", start: '2021-06-11', end: '2024-06-11' },
-    { id: 4, name: "Licitación IFT", start: '2022-01-08', end: '2024-12-31' },
-    { id: 5, name: "Bolsa Mexicana de valores", start: '2021-07-05', end: '2024-08-01' },
-    { id: 6, name: "Secretaria de la Función Pública", start: '2022-08-12', end: '2025-08-12' },
-    { id: 7, name: "Renovación de las pólizas de soporte y servicio de mtto al DC del IFT", start: '2023-01-01', end: '2025-12-31' },
-    { id: 8, name: "CHEVY SAN CARLOS", start: '2023-03-21', end: '2026-03-20' },
-    { id: 9, name: "Solución Netbotz SKY", start: '2023-01-04', end: '2028-01-04' },
-    { id: 10, name: "ATALAIT Póliza de Soporte", start: '2023-04-10', end: '2024-09-08' },
-    { id: 11, name: "Implementación con Póliza Sabadell", start: '2023-03-01', end: '2024-02-28' },
-    { id: 12, name: "Implementación y póliza de servicio Break&Fix para equipos TOR", start: '2023-08-02', end: '2026-08-01' },
-    { id: 13, name: "Servicios de implementación MPO MTY", start: '2023-07-19', end: '2024-11-18' },
-    { id: 14, name: "Servicio de Suministro, logística y montaje para 26 Huawei IdeaHub", start: '2024-01-22', end: '2025-01-21' },
-    { id: 15, name: "Hotel las Quintas", start: '2022-06-10', end: '2025-06-08' },
-    { id: 16, name: "Kenworth Fase 1 - Señalización Digital", start: '2024-04-01', end: '2025-03-31' }
+    { id: 1, empresa: "Bestel", id_proyect: "BEST-2011-22", name: "Sec. Fun. Pública", start: '2022-08-12', end: '2025-08-12' },
+    { id: 2, empresa: "IFT", id_proyect: "IFT-2202-22", name: "IFT CPD", start: '2023-01-01', end: '2025-12-31' },
+    { id: 3, empresa: "Grupo Senda", id_proyect: "TTM-2001-22", name: "Senda", start: '2023-03-01', end: '2026-02-28' },
+    { id: 4, empresa: "SKY", id_proyect: "SKY-2007-21", name: "Netbotz SKY", start: '2023-01-04', end: '2028-01-04' },
+    { id: 5, empresa: "Telefónica", id_proyect: "TELE-2302-23", name: "Sabadell", start: '2023-03-01', end: '2025-04-30' },
+    { id: 6, empresa: "KIO", id_proyect: "KIO-2328-23", name: "Equipos TOR", start: '2023-08-02', end: '2026-08-01' },
+    { id: 7, empresa: "Bestel", id_proyect: "BEST-2301-23", name: "TELECOM", start: '2023-09-01', end: '2026-09-30' },
+    { id: 8, empresa: "Soriana", id_proyect: "TSOR-2301-23", name: "Soriana IDEAHUB", start: '2024-01-22', end: '2025-01-21' },
+    { id: 9, empresa: "Bestel", id_proyect: "BEST-2313-23", name: "Ciudad Digital ADIP", start: '2023-11-07', end: '2025-11-06' },
+    { id: 10, empresa: "Bestel", id_proyect: "BEST-2314-23", name: "Ciudad Digital ADIP Legada", start: '2023-04-01', end: '2025-03-31' },
+    { id: 11, empresa: "Bestel", id_proyect: "BEST-2327-23", name: "Póliza NBD Ciudad Digital", start: '2023-10-01', end: '2025-03-31' },
+    { id: 12, empresa: "Tren Maya", id_proyect: "MAYA-2300-23", name: "Tren Maya", start: '2024-10-01', end: '2025-03-31' },
+    { id: 13, empresa: "Bestel", id_proyect: "BEST-2008-22", name: "Hotel las Quintas", start: '2022-06-10', end: '2025-06-08' },
+    { id: 14, empresa: "Hola Innovación", id_proyect: "HOLA-2401-24", name: "Kenworth", start: '2024-04-01', end: '2025-03-31' },
+    { id: 15, empresa: "Bestel", id_proyect: "BEST-2410-24", name: "Routers Multiva", start: '2024-07-01', end: '2027-08-01' },
+    { id: 16, empresa: "CVR", id_proyect: "CVR-2402-24", name: "MILESTONE MAVC", start: '2024-06-01', end: '2025-05-31' },
+    { id: 17, empresa: "Soriana", id_proyect: "FALA-2401-24", name: "Falabella Soriana", start: '2024-07-15', end: '2027-06-15' },
+    { id: 18, empresa: "Atalait", id_proyect: "LATAM-2301-23", name: "Atalait", start: '2024-10-08', end: '2025-04-09' },
+    { id: 19, empresa: "ANAM", id_proyect: "ANAM", name: "ANAM", start: '2024-11-01', end: '2025-03-31' },
+    { id: 20, empresa: "Bestel", id_proyect: "BEST-2420-24", name: "Estadio Azteca", start: '2024-11-11', end: '2025-09-22' },
+    { id: 21, empresa: "IFT", id_proyect: "IFT-2401-24", name: "IFT RESANHI", start: '2025-01-01', end: '2027-12-31' }
 ];
+
 
 
 
@@ -56,7 +62,7 @@ svg.append("g")
     const tbody = table.append("tbody");
 
     // Encabezado de la tabla
-    const columns = ["ID", "Nombre de Poliza", "Fecha de Inicio", "Fecha de Fin", "Porcentaje"];
+    const columns = ["ID", "Empresa","Proyecto","ID de Proyecto", "Fecha de Inicio", "Fecha de Fin", "% Avance de Poliza"];
     thead.append("tr")
         .selectAll("th")
         .data(columns)
@@ -129,26 +135,42 @@ function updateChart() {
         .text(d => `${Math.round(d.progress)}%`);
 
 
- // Actualizar las filas de la tabla
- const rows = tbody.selectAll("tr")
- .data(policies);
- // Actualizar las celdas existentes y agregar filas nuevas si es necesario
 // Actualizar las filas de la tabla
+const rows = tbody.selectAll("tr")
+    .data(policies);
 
 // Agregar filas nuevas si es necesario y aplicar clase
 const rowsEnter = rows.enter().append("tr")
     .merge(rows)
     .attr("class", d => (d.progress === 100 ? "highlight" : ""));
 
-
-
-
 // Agregar celdas a las filas
-rowsEnter.selectAll("td")
- .data(row => [row.id, row.name, row.start, row.end, `${Math.round(row.progress)}%`])
- .enter()
- .append("td")
- .text(d => d);
+const cells = rowsEnter.selectAll("td")
+    .data(row => [row.id, row.empresa, row.name, row.id_proyect, row.start, row.end, row.progress])
+    .enter()
+    .append("td");
+
+// Llenar las celdas con texto excepto la última columna (porcentaje)
+cells.filter((d, i) => i < 6) // Omitimos la última columna (índice 6)
+    .text(d => d);
+
+// Para la columna "% Avance de Póliza", agregamos un div con barra de progreso
+cells.filter((d, i) => i === 6)
+    .append("div")
+    .style("width", "100px") // Ancho de la barra de progreso
+    .style("height", "15px") // Altura de la barra de progreso
+    .style("background", "#ddd") // Fondo de la barra
+    .style("border-radius", "5px")
+    .style("position", "relative")
+    .append("div")
+    .style("height", "100%")
+    .style("width", d => `${d}%`) // Ajustar el ancho según el porcentaje
+    .style("background", "green") // Color de la barra
+    .style("border-radius", "5px")
+    .style("text-align", "center")
+    .style("color", "white")
+    .style("font-size", "12px")
+    .text(d => `${Math.round(d)}%`);
 }
 
 // Actualizar el gráfico cada segundo
@@ -156,3 +178,131 @@ setInterval(updateChart, 1000);
 
 // Inicializar el gráfico
 updateChart();
+
+// Contenedor para las dos nuevas tablas
+const tablesContainer = d3.select("#table")
+    .append("div")
+    .attr("id", "extra-tables")
+    .style("display", "flex") // Hace que las tablas estén una al lado de otra
+    .style("gap", "20px"); // Espacio entre las tablas
+
+// Crear Tabla 1 - Prospecto a Renovación
+const table1 = tablesContainer.append("table")
+    .style("border", "1px solid black")
+    .style("border-collapse", "collapse");
+
+// Encabezado de la tabla 1
+table1.append("tr")
+    .append("th")
+    .attr("colspan", 3) // Para que el título abarque 3 columnas
+    .text("Prospecto a Renovación")
+    .style("text-align", "center")
+    .style("background", "#4CAF50")
+    .style("color", "white")
+    .style("padding", "10px");
+
+// Encabezados de columnas
+const headers1 = ["Cliente", "ID de Proyecto", "Proyecto"];
+table1.append("tr")
+    .selectAll("th")
+    .data(headers1)
+    .enter()
+    .append("th")
+    .text(d => d)
+    .style("border", "1px solid black")
+    .style("padding", "8px");
+
+    const filat1 = ["AIFA", "AIFA-2401-24", "AIFA Frente 7/43"];
+    table1.append("tr")
+        .selectAll("td")
+        .data(filat1)
+        .enter()
+    .append("th")
+    .text(d => d)
+    .style("border", "1px solid black")
+    .style("padding", "8px");
+
+
+        const filat2 = ["AIFA", "AIFA-2402-24", "AIFA APOC"];
+    table1.append("tr")
+        .selectAll("td")
+        .data(filat2)
+        .enter()
+        .append("th")
+        .text(d => d)
+        .style("border", "1px solid black")
+        .style("padding", "8px");
+    
+
+        const filat3 = ["AIFA", "AIFA-2403-24", "AIFA DAS"];
+    table1.append("tr")
+        .selectAll("td")
+        .data(filat3)
+        .enter()
+    .append("th")
+    .text(d => d)
+    .style("border", "1px solid black")
+    .style("padding", "8px");
+
+
+
+// Crear Tabla 2 - Próximas Pólizas
+const table2 = tablesContainer.append("table")
+    .style("border", "1px solid black")
+    .style("border-collapse", "collapse");
+
+// Encabezado de la tabla 2
+table2.append("tr")
+    .append("th")
+    .attr("colspan", 3)
+    .text("Próximas Pólizas")
+    .style("text-align", "center")
+    .style("background", "#4CAF50")
+    .style("color", "white")
+    .style("padding", "10px");
+
+// Encabezados de columnas
+const headers2 = ["Cliente", "ID de Proyecto", "Proyecto"];
+table2.append("tr")
+    .selectAll("th")
+    .data(headers2)
+    .enter()
+    .append("th")
+    .text(d => d)
+    .style("border", "1px solid black")
+    .style("padding", "8px");
+
+
+const fila1 = ["CLARO", "CLA-2401-24", "ECOPETROL"]; 
+    table2.append("tr")
+        .selectAll("td")
+        .data(fila1)
+        .enter()
+    .append("th")
+    .text(d => d)
+    .style("border", "1px solid black")
+    .style("padding", "8px");
+
+
+        const fila2 = ["INTERNEXA", "COL-2402-24", "SENA"]; 
+    table2.append("tr")
+        .selectAll("td")
+        .data(fila2)
+        .enter()
+        .append("th")
+        .text(d => d)
+        .style("border", "1px solid black")
+        .style("padding", "8px");
+    
+
+        const fila3 = ["METLIFE", "METL-2418-24", "METLIFE WIFI"]; 
+    table2.append("tr")
+        .selectAll("td")
+        .data(fila3)
+        .enter()
+        .append("th")
+        .text(d => d)
+        .style("border", "1px solid black")
+        .style("padding", "8px");
+    
+
